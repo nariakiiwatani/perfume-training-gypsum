@@ -117,9 +117,9 @@
       </PrecompiledHeaderOutputFile>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>openframeworksLibDebug.lib;cairo-static.lib;pixman-1.lib;msimg32.lib;OpenGL32.lib;GLu32.lib;kernel32.lib;setupapi.lib;Vfw32.lib;comctl32.lib;glut32.lib;rtAudioD.lib;videoInput.lib;libfreetype.lib;FreeImage.lib;qtmlClient.lib;dsound.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;glew32s.lib;fmodex_vc.lib;glu32.lib;PocoFoundationmdd.lib;PocoNetmdd.lib;PocoUtilmdd.lib;PocoXMLmdd.lib;Ws2_32.lib;tess2.lib;msdmo.lib;dmoguids.lib;amstrmid.lib;WinMM.Lib;ofxOpenNI_Debug.lib;openNI.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>openframeworksLibDebug.lib;cairo-static.lib;pixman-1.lib;msimg32.lib;OpenGL32.lib;GLu32.lib;kernel32.lib;setupapi.lib;Vfw32.lib;comctl32.lib;glut32.lib;rtAudioD.lib;videoInput.lib;libfreetype.lib;FreeImage.lib;qtmlClient.lib;dsound.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;glew32s.lib;fmodex_vc.lib;glu32.lib;PocoFoundationmdd.lib;PocoNetmdd.lib;PocoUtilmdd.lib;PocoXMLmdd.lib;Ws2_32.lib;tess2.lib;msdmo.lib;dmoguids.lib;amstrmid.lib;WinMM.Lib;ofxOpenNI_Debug.lib;openNI.lib;Kinect10.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <AdditionalLibraryDirectories>$(OF_ROOT)\libs\glut\lib\vs2010;$(OF_ROOT)\libs\rtAudio\lib\vs2010;$(OF_ROOT)\libs\FreeImage\lib\vs2010;$(OF_ROOT)\libs\freetype\lib\vs2010;$(OF_ROOT)\libs\quicktime\lib\vs2010;$(OF_ROOT)\libs\fmodex\lib\vs2010;$(OF_ROOT)\libs\videoInput\lib\vs2010;$(OF_ROOT)\libs\cairo\lib\vs2010;$(OF_ROOT)\libs\glew\lib\vs2010;$(OF_ROOT)\libs\glu\lib\vs2010;$(OF_ROOT)\libs\Poco\lib\vs2010;$(OF_ROOT)\libs\openFrameworksCompiled\lib\vs2010;$(OF_ROOT)\libs\tess2\lib\vs2010;$(OF_ROOT)\addons\ofxOpenNI\lib;$(PROGRAM)\lib\openNI;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(OF_ROOT)\libs\glut\lib\vs2010;$(OF_ROOT)\libs\rtAudio\lib\vs2010;$(OF_ROOT)\libs\FreeImage\lib\vs2010;$(OF_ROOT)\libs\freetype\lib\vs2010;$(OF_ROOT)\libs\quicktime\lib\vs2010;$(OF_ROOT)\libs\fmodex\lib\vs2010;$(OF_ROOT)\libs\videoInput\lib\vs2010;$(OF_ROOT)\libs\cairo\lib\vs2010;$(OF_ROOT)\libs\glew\lib\vs2010;$(OF_ROOT)\libs\glu\lib\vs2010;$(OF_ROOT)\libs\Poco\lib\vs2010;$(OF_ROOT)\libs\openFrameworksCompiled\lib\vs2010;$(OF_ROOT)\libs\tess2\lib\vs2010;$(OF_ROOT)\addons\ofxOpenNI\lib;$(PROGRAM)\lib\openNI;$(KINECTSDK10_DIR)\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>atlthunk.lib; LIBC.lib; LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(TargetDir)$(TargetName)_debugInfo.pdb</ProgramDatabaseFile>
@@ -150,8 +150,8 @@
       </PrecompiledHeaderOutputFile>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>openframeworksLib.lib;cairo-static.lib;pixman-1.lib;msimg32.lib;OpenGL32.lib;GLu32.lib;kernel32.lib;setupapi.lib;glut32.lib;rtAudio.lib;videoInput.lib;libfreetype.lib;FreeImage.lib;qtmlClient.lib;dsound.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;glew32s.lib;fmodex_vc.lib;glu32.lib;PocoFoundationmd.lib;PocoNetmd.lib;PocoUtilmd.lib;PocoXMLmd.lib;tess2.lib;ofxOpenNI.lib;msdmo.lib;dmoguids.lib;amstrmid.lib;WinMM.Lib;openNI.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(OF_ROOT)\libs\glut\lib\vs2010;$(OF_ROOT)\libs\rtAudio\lib\vs2010;$(OF_ROOT)\libs\FreeImage\lib\vs2010;$(OF_ROOT)\libs\freetype\lib\vs2010;$(OF_ROOT)\libs\quicktime\lib\vs2010;$(OF_ROOT)\libs\fmodex\lib\vs2010;$(OF_ROOT)\libs\videoInput\lib\vs2010;$(OF_ROOT)\libs\cairo\lib\vs2010;$(OF_ROOT)\libs\glew\lib\vs2010;$(OF_ROOT)\libs\glu\lib\vs2010;$(OF_ROOT)\libs\Poco\lib\vs2010;$(OF_ROOT)\libs\openFrameworksCompiled\lib\vs2010;$(OF_ROOT)\libs\tess2\lib\vs2010;$(OF_ROOT)\addons\ofxOpenNI\lib;$(PROGRAM)\lib\openNI;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>openframeworksLib.lib;cairo-static.lib;pixman-1.lib;msimg32.lib;OpenGL32.lib;GLu32.lib;kernel32.lib;setupapi.lib;glut32.lib;rtAudio.lib;videoInput.lib;libfreetype.lib;FreeImage.lib;qtmlClient.lib;dsound.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;glew32s.lib;fmodex_vc.lib;glu32.lib;PocoFoundationmd.lib;PocoNetmd.lib;PocoUtilmd.lib;PocoXMLmd.lib;tess2.lib;ofxOpenNI.lib;msdmo.lib;dmoguids.lib;amstrmid.lib;WinMM.Lib;openNI.lib;Kinect10.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OF_ROOT)\libs\glut\lib\vs2010;$(OF_ROOT)\libs\rtAudio\lib\vs2010;$(OF_ROOT)\libs\FreeImage\lib\vs2010;$(OF_ROOT)\libs\freetype\lib\vs2010;$(OF_ROOT)\libs\quicktime\lib\vs2010;$(OF_ROOT)\libs\fmodex\lib\vs2010;$(OF_ROOT)\libs\videoInput\lib\vs2010;$(OF_ROOT)\libs\cairo\lib\vs2010;$(OF_ROOT)\libs\glew\lib\vs2010;$(OF_ROOT)\libs\glu\lib\vs2010;$(OF_ROOT)\libs\Poco\lib\vs2010;$(OF_ROOT)\libs\openFrameworksCompiled\lib\vs2010;$(OF_ROOT)\libs\tess2\lib\vs2010;$(OF_ROOT)\addons\ofxOpenNI\lib;$(PROGRAM)\lib\openNI;$(KINECTSDK10_DIR)\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <IgnoreSpecificDefaultLibraries>atlthunk.lib; LIBC.lib; LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -168,6 +168,7 @@
     <PostBuildEvent>
       <Message>adding DLLs and creating data folder</Message>
       <Command>xcopy /e /i /y "$(OF_ROOT)\export\vs2010\*.dll" "$(ProjectDir)bin"
+
 xcopy /e /i /y "$(OF_ROOT)\export\vs2010\*.dll" "$(PROJ_ROOT)\Bin"
 
 xcopy /e /i /y "$(TargetPath)" "$(PROJ_ROOT)\Bin"</Command>

@@ -9,6 +9,7 @@
 CustomJoint::CustomJoint()
 :FactorTask()
 ,source_(NULL)
+,hip_2d_(0,0)
 ,valid_(false)
 {
 }
@@ -33,6 +34,17 @@ ofVec3f Lerp(const ofxLimb& limb, float ratio)
 {
 	return Lerp(limb.position[0], limb.position[1], ratio);
 }
+ofVec2f Lerp2D(XnPoint3D a, XnPoint3D b, float ratio)
+{
+	ofVec2f result;
+	result.x = ofLerp(a.X,b.X,ratio);
+	result.y = ofLerp(a.Y,b.Y,ratio);
+	return result;
+}
+ofVec2f Lerp2D(const ofxLimb& limb, float ratio)
+{
+	return Lerp2D(limb.position[0], limb.position[1], ratio);
+}
 ofVec3f GetAdjuster(const ofVec3f& l, const ofVec3f& r, float length)
 {
 	ofVec3f ret = l-r;
@@ -48,6 +60,8 @@ void CustomJoint::update()
 {
 	if(ofxTrackedUser* user = source_ ? source_->getTrackedUser(0):NULL) {
 		valid_ = true;
+		
+		hip_2d_ = Lerp2D(user->hip, 0.5f);
 		neck_ = Lerp(user->neck, 1);
 		head_ = Lerp(user->neck, 0);
 		l_sh_ = Lerp(user->left_shoulder, 1);

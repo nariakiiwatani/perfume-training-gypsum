@@ -13,6 +13,7 @@ public:
 	void update();
 	void setSource(DeviceTask* source) { source_ = source; }
 	bool isValid() { return valid_; }
+	const ofVec2f& getHipPos2D() { return hip_2d_; }
 
 public:
 	ofVec3f hips_;
@@ -30,6 +31,8 @@ public:
 	ofVec3f r_hi_;
 	ofVec3f r_kn_;
 	ofVec3f r_an_;
+
+	ofVec2f hip_2d_;
 
 private:
 	bool valid_;

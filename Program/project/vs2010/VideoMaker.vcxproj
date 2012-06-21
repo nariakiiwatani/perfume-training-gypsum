@@ -123,6 +123,7 @@
     <PostBuildEvent>
       <Message>adding DLLs and creating data folder</Message>
       <Command>xcopy /e /i /y "$(OF_ROOT)\export\vs2010\*.dll" "$(ProjectDir)bin"
+
 xcopy /e /i /y "$(OF_ROOT)\export\vs2010\*.dll" "$(PROJ_ROOT)\Bin"
 
 xcopy /e /i /y "$(TargetPath)" "$(PROJ_ROOT)\Bin"</Command>

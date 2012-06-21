@@ -10,6 +10,10 @@
 #include "DeviceTask.h"
 #include "TaskKey.h"
 
+namespace {
+const int CROP_WIDTH = 214;
+}
+
 PoseCheck::PoseCheck()
 :Factor()
 ,model_(NULL)
@@ -24,6 +28,7 @@ PoseCheck::PoseCheck()
 ,save_folder_("")
 {
 	image_capture_.allocate(640,480,3);
+	image_divide_capture_.allocate(CROP_WIDTH, 480, 3);
 	depth_capture_.allocate(640,480,1);
 	sprintf(fmt_str_, "%s", "%04d");
 }
@@ -31,7 +36,25 @@ PoseCheck::PoseCheck()
 PoseCheck::~PoseCheck()
 {
 	image_capture_.clear();
+	image_divide_capture_.clear();
 	depth_capture_.clear();
+}
+
+void PoseCheck::setFolder(string folder)
+{
+	save_folder_ = folder;
+	ofDirectory depth(folder+"/depth");
+	ofDirectory image(folder+"/image");
+	ofDirectory divide(folder+"/image_div3");
+	if(!depth.exists()) {
+		depth.create();
+	}
+	if(!image.exists()) {
+		image.create();
+	}
+	if(!divide.exists()) {
+		divide.create();
+	}
 }
 
 void PoseCheck::proc()
@@ -184,13 +207,22 @@ void PoseCheck::draw(int prio)
 		ofxDepthGenerator* depth = device_->getDepthGenerator();
 		memcpy(image_capture_.getPixels(), image->getPixels(), sizeof(char)*640*480*3);
 		memcpy(depth_capture_.getPixels(), depth->getXnDepthPixels(), sizeof(short)*640*480);
+		int crop_x = (int)source_->getHipPos2D().x - CROP_WIDTH/2;
+		if(crop_x < 0) {
+			crop_x = 0;
+		}
+		else if(crop_x > 640 - CROP_WIDTH-1) {
+			crop_x = 640 - CROP_WIDTH-1;
+		}
+		image_capture_.cropTo(image_divide_capture_, crop_x, 0, CROP_WIDTH, 480);
 
 		char number[8]={};
 		sprintf(number, fmt_str_, model_->getFrame()-1);
 		string number_str = ofToString(number);
 
-		ofSaveImage(image_capture_, save_folder_+"/image_"+number_str+".jpg");
-		ofSaveImage(depth_capture_, save_folder_+"/depth_"+number_str+".png");
+		ofSaveImage(image_capture_, save_folder_+"/image/image_"+number_str+".jpg");
+		ofSaveImage(image_divide_capture_, save_folder_+"/image_div3/image_"+number_str+".jpg");
+		ofSaveImage(depth_capture_, save_folder_+"/depth/image_"+number_str+".png");
 	}
 	else if(prio == PRIO_SHUTTER) {
 		ofEnableAlphaBlending();

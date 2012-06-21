@@ -19,7 +19,7 @@ public:
 	void proc();
 	void draw(int prio);
 	void bindTask(string bind_type, FactorTask* task);
-	void setFolder(string folder){save_folder_=folder;}
+	void setFolder(string folder);
 private:
 	float getMatchRate();
 	float getMatchRateInverse();
@@ -30,6 +30,7 @@ private:
 	TaskKey* keyboard_;
 	
 	ofPixels image_capture_;
+	ofPixels image_divide_capture_;
 	ofShortPixels depth_capture_;
 
 	static const int OK_COUNT_MAX = 60;
