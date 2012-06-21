@@ -28,7 +28,7 @@ ANYONE CAN DANCE PERFUME by using this application. :-)
 ### Make movie
 -You don't have to use this exe file if you had any other way to make movie from sequenced images and sound.-
 1. Double click /Bin/VideoMaker.exe
-1. Select the folder you saved images.
+1. Select "image" folder created automaticaly under the folder you selected to save images.
 1. Select a sound file.
 1. Choose path to save movie.
 
