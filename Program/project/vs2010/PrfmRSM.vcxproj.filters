@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\source\bvh\src\BvhTask.cpp">
+      <Filter>bvh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\app\src\AppManager.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\app\src\CameraControl.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\app\src\CustomJoint.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\app\src\DebugString.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\factor\src\Factor.cpp">
+      <Filter>factor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\factor\src\FactorManager.cpp">
+      <Filter>factor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\factor\src\FactorTask.cpp">
+      <Filter>factor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\factor\src\FactorTaskAnimation.cpp">
+      <Filter>factor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\app\src\FloorDraw.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\app\src\FrameControl.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\main\src\main.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\app\src\ModelDraw.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lib\openframeworks\addons\ofxBvh\src\ofxBvh.cpp">
+      <Filter>addons\ofxBvh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\factor\src\ParentLine.cpp">
+      <Filter>factor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\app\src\PoseCheck.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\app\src\PoseControl.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\main\src\PrfmRSM.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\app\src\SkeletonDraw.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\factor\src\TaskDraw.cpp">
+      <Filter>factor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\factor\src\TaskKey.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\factor\src\TaskPose.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\app\src\VideoDraw.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\device\src\DeviceTask.cpp">
+      <Filter>device</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\bvh\include\BvhTask.h">
+      <Filter>bvh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\app\include\DebugString.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\app\include\AppManager.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\app\include\CameraControl.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\app\include\CustomJoint.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\factor\include\FactorTaskAnimation.h">
+      <Filter>factor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\factor\include\Factor.h">
+      <Filter>factor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\factor\include\FactorManager.h">
+      <Filter>factor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\factor\include\FactorTask.h">
+      <Filter>factor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\app\include\FrameControl.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\app\include\FloorDraw.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\app\include\ModelDraw.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\lib\openframeworks\addons\ofxBvh\src\ofxBvh.h">
+      <Filter>addons\ofxBvh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\factor\include\ParentLine.h">
+      <Filter>factor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\app\include\PoseControl.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\app\include\PoseCheck.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\main\include\PrfmRSMDef.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\main\include\PrfmRSM.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\app\include\SkeletonDraw.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\factor\include\TaskDraw.h">
+      <Filter>factor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\app\include\VideoDraw.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\factor\include\TaskKey.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\factor\include\TaskPose.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\device\include\DeviceTask.h">
+      <Filter>device</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="addons">
+      <UniqueIdentifier>{2c607ddd-0614-4885-a68c-2d4e4473b763}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxBvh">
+      <UniqueIdentifier>{2561d058-d012-4217-9346-4db6f47c8db4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{86383a84-f8cc-4ce0-bf79-6f7e9e328c58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="factor">
+      <UniqueIdentifier>{10108b23-09c9-486b-aa03-ca2fe4d103ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bvh">
+      <UniqueIdentifier>{02b9ff9a-d75d-4aca-a9e0-06c4ed816020}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app">
+      <UniqueIdentifier>{9209799b-364b-4a2f-85e8-8e303e13ea82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="device">
+      <UniqueIdentifier>{2a329b0d-1386-4ea3-a283-d297a4e1a4ee}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

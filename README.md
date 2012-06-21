@@ -1,18 +1,52 @@
+# Perfume Global Site Project #001 -Real Stop Motion-
+[perfume global site]( http://www.perfume-global.com/ )
+
+ANYONE CAN DANCE PERFUME by using this application. :-)
 
 ## Requirement
-1: Connected device that can be used through [OpenNI](http://www.openni.org/ "OpenNI").
+* Connected device that can be used through [OpenNI]( http://www.openni.org/ "OpenNI").
+
+## Usage
+### Get BVH files and Sound file
+1. Download from [here]( http://www.perfume-global.com/ "perfume global site")
+
+### Create sequenced image files
+1. Double click /Bin/PrfmRSM.exe
+1. Choose a BVH file.
+1. Select a folder to save image files.
+1. Conform your bone to displayed model. EVERY frame...
+
+#### In PrfmRSM...
+* Left Arrow: \-1 frame
+* Right Arrow: \+1 frame
+* Down Arrow: \-50 frame
+* Up Arrow: \+50 frame
+* Enter Key: Grab image and \+1 frame (even though your pose is fake.)
+* z: lower match rate
+* x: upper match rate
+
+### Make movie
+-You don't have to use this exe file if you had any other way to make movie from sequenced images and sound.-
+1. Double click /Bin/VideoMaker.exe
+1. Select the folder you saved images.
+1. Select a sound file.
+1. Choose path to save movie.
+
+### For Programmers
+* You can reduce BVH file's frame rate with /Tools/conv_bvh_frame_rate.pl
+* If you use Visual Studio /Tools/start_vs.bat may save steps of project setup. Anyway open it with a texteditor. :)
 
 ## License
-built by nariakiiwatani
-facebook: nariakiiwatani
-twitter: @nariakiiwatani
-mail: nariakiiwatani@annolab.com
+built by nariakiiwatani  
+facebook: nariakiiwatani  
+twitter: @nariakiiwatani  
+mail: nariakiiwatani@annolab.com  
 
 ----------------------------------------------------------
 
 The MIT License
 
-Copyright (c) 2012 nariakiiwatani and [anno lab](http://www.annolab.com/ "anno lab")
+Copyright (c) 2012 nariakiiwatani and [anno lab]( http://www.annolab.com/ "anno lab")
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

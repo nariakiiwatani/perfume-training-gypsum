@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="addons">
+      <UniqueIdentifier>{0d23b8c4-d60a-4c74-b977-5cc3ff74ba28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxQTVideoSaver">
+      <UniqueIdentifier>{58f4d113-8f36-4cfb-b7ea-07728359b09f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\lib\openframeworks\addons\ofxQTVideoSaver\src\ofxQtVideoSaver.cpp">
+      <Filter>addons\ofxQTVideoSaver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\video\vm_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\lib\openframeworks\addons\ofxQTVideoSaver\src\ofxQtVideoSaver.h">
+      <Filter>addons\ofxQTVideoSaver</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

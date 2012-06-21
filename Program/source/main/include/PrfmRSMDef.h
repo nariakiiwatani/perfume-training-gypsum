@@ -1,0 +1,27 @@
+
+#pragma once
+
+#define SCREEN_WIDTH 1920
+#define SCREEN_HEIGHT 1080
+
+enum {
+	PRIO_TOP,
+	
+	PRIO_SCREEN_SHOT,
+	
+	PRIO_GAUGE,
+	PRIO_SKELETON_2D,
+	PRIO_VIDEO,
+
+	PRIO_MODEL,
+
+	PRIO_SKELETON_3D,
+
+	PRIO_SHUTTER,
+	
+	PRIO_FLOOR,
+	
+	PRIO_BOTTOM,
+};
+
+/* EOF */
