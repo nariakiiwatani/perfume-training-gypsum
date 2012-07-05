@@ -29,11 +29,11 @@ EVERYONE CAN DANCE PERFUME by using this application. :-)
 * Space Bar: random frame
 
 ### Make movie
+_You can skip this step if you had any other way to make movie from sequenced images and sound._  
 1. Double click /Bin/VideoMaker.exe
 1. Select "image" folder created automaticaly under the folder you selected to save images.
 1. Select a sound file.
 1. Select a path to save movie.
-_You can skip this step if you had any other way to make movie from sequenced images and sound._  
 
 ### For Programmers
 * You can reduce BVH file's frame rate with /Tools/conv_bvh_frame_rate.pl
