@@ -29,7 +29,16 @@ void ModelDraw::draw(int prio)
 		camera_->begin();
 	}
 	pose_->pushSetMatrix();
-	source_->drawModel();
+	/**
+	int frame = source_->getFrame();
+	int count = 3;
+	for(int i = count-1; i >= 0; --i) {
+		source_->setFrame(frame-i);
+		source_->update();
+		source_->drawModel(0.8f-0.3f*i);
+	}
+	/**/
+	source_->drawModel(0.8f);
 	pose_->popMatrix();
 	if(camera_) {
 		camera_->end();

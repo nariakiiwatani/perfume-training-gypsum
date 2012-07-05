@@ -31,6 +31,7 @@ private:
 	
 	ofPixels image_capture_;
 	ofPixels image_divide_capture_;
+	ofPixels image_user_capture_;
 	ofShortPixels depth_capture_;
 
 	static const int OK_COUNT_MAX = 60;

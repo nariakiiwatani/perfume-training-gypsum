@@ -1,7 +1,7 @@
 # Perfume Global Site Project #001 -Real Stop Motion-
 [perfume global site]( http://www.perfume-global.com/ )
 
-ANYONE CAN DANCE PERFUME by using this application. :-)
+EVERYONE CAN DANCE PERFUME by using this application. :-)
 
 ## Requirement
 * Connected device that can be used through [OpenNI]( http://www.openni.org/ "OpenNI").
@@ -12,8 +12,10 @@ ANYONE CAN DANCE PERFUME by using this application. :-)
 
 ### Create sequenced image files
 1. Double click /Bin/PrfmRSM.exe
-1. Choose a BVH file.
+1. Select a BVH file.
 1. Select a folder to save image files.
+1. Application window will open and there will be showing a T-posed model.
+1. Make sure that your bone(skeleton) is recognized and displayed.
 1. Conform your bone to displayed model. EVERY frame...
 
 #### In PrfmRSM...
@@ -24,13 +26,14 @@ ANYONE CAN DANCE PERFUME by using this application. :-)
 * Enter Key: Grab image and \+1 frame (even though your pose is fake.)
 * z: lower match rate
 * x: upper match rate
+* Space Bar: random frame
 
 ### Make movie
--You don't have to use this exe file if you had any other way to make movie from sequenced images and sound.-
+_You can skip this step if you had any other way to make movie from sequenced images and sound._
 1. Double click /Bin/VideoMaker.exe
 1. Select "image" folder created automaticaly under the folder you selected to save images.
 1. Select a sound file.
-1. Choose path to save movie.
+1. Select a path to save movie.
 
 ### For Programmers
 * You can reduce BVH file's frame rate with /Tools/conv_bvh_frame_rate.pl

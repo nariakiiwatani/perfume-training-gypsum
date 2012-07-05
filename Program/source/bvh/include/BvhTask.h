@@ -22,7 +22,7 @@ public:
 	float getTall();
 
 	void update();
-	void drawModel();
+	void drawModel(float alpha=1.0f);
 	ofVec3f getPosition();
 
 	ofxBvh* getModel() { return &model_; }

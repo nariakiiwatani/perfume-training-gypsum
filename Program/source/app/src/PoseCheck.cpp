@@ -11,7 +11,7 @@
 #include "TaskKey.h"
 
 namespace {
-const int CROP_WIDTH = 214;
+const int CROP_WIDTH = 285;
 }
 
 PoseCheck::PoseCheck()
@@ -28,6 +28,7 @@ PoseCheck::PoseCheck()
 ,save_folder_("")
 {
 	image_capture_.allocate(640,480,3);
+	image_user_capture_.allocate(640,480,3);
 	image_divide_capture_.allocate(CROP_WIDTH, 480, 3);
 	depth_capture_.allocate(640,480,1);
 	sprintf(fmt_str_, "%s", "%04d");
@@ -36,6 +37,7 @@ PoseCheck::PoseCheck()
 PoseCheck::~PoseCheck()
 {
 	image_capture_.clear();
+	image_user_capture_.clear();
 	image_divide_capture_.clear();
 	depth_capture_.clear();
 }
@@ -46,6 +48,7 @@ void PoseCheck::setFolder(string folder)
 	ofDirectory depth(folder+"/depth");
 	ofDirectory image(folder+"/image");
 	ofDirectory divide(folder+"/image_div3");
+	ofDirectory user(folder+"/image_user");
 	if(!depth.exists()) {
 		depth.create();
 	}
@@ -55,6 +58,9 @@ void PoseCheck::setFolder(string folder)
 	if(!divide.exists()) {
 		divide.create();
 	}
+	if(!user.exists()) {
+		user.create();
+	}
 }
 
 void PoseCheck::proc()
@@ -63,13 +69,13 @@ void PoseCheck::proc()
 	unsigned int repeat = keyboard_->getTrigger()|keyboard_->getRepeat();
 	
 	if(repeat & KEY_X) {
-		ok_rate2_ += 0.001f;
+		ok_rate2_ += 0.0002f;
 		if(ok_rate2_ > ok_rate_) {
 			ok_rate2_ = ok_rate_;
 		}
 	}
 	else if(repeat & KEY_Z) {
-		ok_rate2_ -= 0.001f;
+		ok_rate2_ -= 0.0002f;
 		if(ok_rate2_ < bad_rate_) {
 			ok_rate2_ = bad_rate_;
 		}
@@ -88,7 +94,7 @@ void PoseCheck::proc()
 		}
 		if(match_rate_ > ok_rate_) {
 			ok_count_ += 5;
-			printf("%.3f\n", match_rate_);
+//			printf("%.3f\n", match_rate_);
 		}
 		else if(match_rate_ > ok_rate2_) {
 			ok_count_ += 2;
@@ -96,10 +102,12 @@ void PoseCheck::proc()
 		else if(match_rate_ < bad_rate_) {
 			ok_count_ = 0;
 		}
+		/**
 		static int count = 0;
 		if(count++ % 60 == 0) {
 			printf("%.3f\n", match_rate_);
 		}
+		/**/
 	}
 	getManager()->addDraw(PRIO_SHUTTER, this);
 	
@@ -205,8 +213,25 @@ void PoseCheck::draw(int prio)
 	if(prio == PRIO_SCREEN_SHOT) {
 		ofxImageGenerator* image = device_->getImageGenerator();
 		ofxDepthGenerator* depth = device_->getDepthGenerator();
+		ofxUserGenerator* user = device_->getUserGenerator();
 		memcpy(image_capture_.getPixels(), image->getPixels(), sizeof(char)*640*480*3);
 		memcpy(depth_capture_.getPixels(), depth->getXnDepthPixels(), sizeof(short)*640*480);
+		unsigned char* pixels_user = user->getUserPixels();
+		unsigned char* pixels_image_user = image_user_capture_.getPixels();
+		unsigned char* pixels_image = image_capture_.getPixels();
+		
+		for(int i = 0; i < 640*480; ++i) {
+			if(pixels_user[i] == 0) {
+				pixels_image_user[3*i] = 0;
+				pixels_image_user[3*i+1] = 0;
+				pixels_image_user[3*i+2] = 0;
+			}
+			else {
+				pixels_image_user[3*i] = pixels_image[3*i];
+				pixels_image_user[3*i+1] = pixels_image[3*i+1];
+				pixels_image_user[3*i+2] = pixels_image[3*i+2];
+			}
+		}
 		int crop_x = (int)source_->getHipPos2D().x - CROP_WIDTH/2;
 		if(crop_x < 0) {
 			crop_x = 0;
@@ -221,6 +246,7 @@ void PoseCheck::draw(int prio)
 		string number_str = ofToString(number);
 
 		ofSaveImage(image_capture_, save_folder_+"/image/image_"+number_str+".jpg");
+		ofSaveImage(image_user_capture_, save_folder_+"/image_user/image_"+number_str+".jpg");
 		ofSaveImage(image_divide_capture_, save_folder_+"/image_div3/image_"+number_str+".jpg");
 		ofSaveImage(depth_capture_, save_folder_+"/depth/image_"+number_str+".png");
 	}

@@ -32,7 +32,8 @@ void main()
 	if(result.bSuccess) {
 		sound_file = result.getPath();
 	}
-	float frame_length = img_num/(float)(40*2820);
+	double frame_length = img_num/(double)(40*2819);
+	printf("frame length:%f\n", frame_length);
 	printf("select path to save movie...\n");
 	result = ofSystemSaveDialog("perfume_global_site_project.mov", "save movie.");
 	if(!result.bSuccess) {

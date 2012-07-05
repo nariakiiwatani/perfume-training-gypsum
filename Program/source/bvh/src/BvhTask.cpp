@@ -20,7 +20,7 @@ void BvhTask::update()
 	model_.update();
 }
 
-void BvhTask::drawModel()
+void BvhTask::drawModel(float alpha)
 { 
 //	model_.draw();
 	
@@ -58,14 +58,14 @@ void BvhTask::drawModel()
 		ofVec3f oppo = joints[i].end->getPosition();
 		ofTranslate(wpos);
 		oppo -= wpos;
-		ofSetColor(0,0,0,200);
+		ofSetColor(0,0,0,alpha*255);
 		ofSetLineWidth(10);
 		ofLine(0,0,0, oppo.x,oppo.y,oppo.z);
-		ofSetColor(255,255,255,200);
+		ofSetColor(255,255,255,alpha*255);
 		ofSetLineWidth(14);
 		ofLine(0,0,0, oppo.x,oppo.y,oppo.z);
 		if(joints[i].sphere) {
-			ofSetColor(255,0,255,200);
+			ofSetColor(255,0,255,alpha*255);
 			ofSphere(oppo,4);
 		}
 		ofPopMatrix();
